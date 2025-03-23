@@ -20,6 +20,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const abiToken = JSON.parse(
   readFileSync(join(__dirname, './abi.json'), 'utf8')
 );
+const erc20ABI = JSON.parse(
+  readFileSync(join(__dirname, './erc20.json'), 'utf8')
+);
 
 export const sbtmint = async (req, res) => {
   const { to } = req.body;
